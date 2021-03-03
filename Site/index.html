@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Armani</title>
+
+    <!-- Bootstrap 4+ css minified -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Video.js Css-->
+    <link rel="stylesheet" href="https://vjs.zencdn.net/7.8.4/video-js.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Css -->
+    
+
+  <style>@keyframes fadeOut {
+	0% {
+		display: flex;
+		opacity: 1;
+	}
+
+	90% {
+		display: flex;
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		bottom: 0;
+	}
+
+	100% {
+		bottom: -300px;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		bottom: -300px;
+	}
+
+	100% {
+		bottom: 0;
+	}
+}
+
+
+@font-face {
+  font-family: ActaDisplayW01-Book;
+  src: url(../fonts/ActaDisplayW01-Book.woff2);
+}
+
+@font-face {
+  font-family: AktivGrotesk-Bold;
+  src: url(../fonts/Aktiv\ Grotesk\ Bold.woff2);
+}
+
+@font-face {
+  font-family: AktivGrotesk-Regular;
+  src: url(../fonts/Aktiv\ Grotesk\ W06\ Regular.woff2);
+}
+
+@font-face {
+	font-family: AktivGrotesk-Medium;
+	src: url(../fonts/Aktiv_Grotesk_W01_Medium.woff2);
+}
+
+:root {
+	--main-color: #181818;
+	--main-color-rgba: rgb(24, 24, 24, .8);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: var(--main-color-rgba) !important;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: AktivGrotesk-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+	opacity: 0;
+	animation: fadeIn .5s 1s ease-in forwards;
+}
+
+h1 {
+	font-family: ActaDisplayW01-Book;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+}
+
+h2 {
+	font-family: ActaDisplayW01-Book;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: var(--main-color);
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8a8fa3;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.navbar-custom {
+    background-color: var(--main-color);
+    height: 60px;
+}
+
+.navbar-custom .navbar-brand{
+	margin-right: 0;
+}
+
+button {
+	font-family: AktivGrotesk-Bold;
+	background: none;
+	border: 1px solid var(--main-color);
+	border-radius: 2px;
+	width: 138px;
+	height: 38px;
+}
+
+/* Swiper slider modifications */
+	.swiper-pagination-bullet {
+		opacity: .8;
+		background-color: transparent;
+		border: 1px solid var(--main-color);
+		outline: none;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: var(--main-color);
+		opacity: 1;
+	}
+/* Swiper slider modifications END */
+
+/* Video.js modificiations */
+	.video-js .vjs-big-play-button {
+		background: transparent !important;
+		border: none;
+		/* opacity: .8; */
+		width: 100%;
+		height: 100%;
+		line-height: 0;
+		top: 0;
+		left: 0;
+	}
+
+	.video-js .vjs-big-play-button {
+		font-size: 13em;
+	}
+
+	.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.video-js .vjs-control-bar {
+		background-color: var(--main-color);
+	}
+
+	.video-js.vjs-fullscreen video {
+		height: 100% !important;
+	}
+
+	.vjs-poster {
+		background-size: cover;
+	}
+/* Video.js modificiations END */
+
+/* mobile-full-screen */
+#first-slider-row,
+#second-slider-row,
+#win-now,
+#journey{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+body {
+    padding-top: 60px;
+}
+
+#first-slider-row {
+	margin-bottom: 5px;
+}
+
+#first-slider-row .col-sm {
+	padding: 0;
+}
+
+#first-slider-row .swiper-container {
+	padding-bottom: 30px;
+}
+
+#first-slider-row .col-sm img {
+	width: 100%;
+}
+
+#first-slider-row .swiper-button-next,
+#first-slider-row .swiper-button-prev {
+	display: none;
+}
+
+#second-slider-row img {
+	width: 100%;
+}
+
+#second-slider-row {
+	background-position: center;
+    background-size: cover;
+	background-repeat: no-repeat;
+	align-items: flex-start;
+	
+	margin-bottom: 40px;
+}
+
+#second-slider-row .swiper-button-next,
+#second-slider-row .swiper-button-prev {
+	display: none;
+}
+
+#second-slider-row .swiper-container {
+	padding-bottom: 40px;
+}
+
+#third-slider-row {
+	margin-bottom: 40px;
+}
+
+#third-slider-row .swiper-container {
+	padding-bottom: 50px;
+}
+
+#third-slider-row .swiper-button-next,
+#third-slider-row .swiper-button-prev {
+	display: none;
+}
+
+#third-slider-row img {
+	max-width: 90%;
+	margin-top: auto;
+}
+
+#third-slider-row .product-name {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#third-slider-row .product-quantity {
+	font-family: AktivGrotesk-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+#third-slider-row .product-price {
+	font-family: AktivGrotesk-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+#win-now {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 20px 0px;
+    margin-bottom: 0;
+	font-family: AktivGrotesk-Medium;
+}
+
+#win-now h2{
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+#win-now button {
+	color: #fff;
+	border-color: #fff;
+	font-family: AktivGrotesk-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+#journey h1 {
+	text-transform: uppercase;
+    font-size: 24px;
+    margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+    width: 90%;
+}
+
+#journey video {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+#journey .video-js {
+	width: 100%;
+	height: 100%;
+	line-height: 0;
+}
+
+#video-group {
+    padding: 25px 0;
+}
+
+#video-group .padding-right-15 {
+	/* padding-right: 15px; */
+}
+
+#video-group .padding-left-15 {
+	/* padding-left: 15px; */
+}
+
+#video-group .video-container {
+	margin-bottom: 20px;
+	width: 100%;
+	max-height: 200px;
+}
+
+#video-group .video-js {
+	width: 200px;
+	height: 200px;
+	line-height: 0;
+}
+
+#video-group .video-text-group {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+}
+
+#video-group .video-text-group .description{ 
+	display: none;
+}
+
+#video-group h1 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#video-group video {
+	width: 100%;
+    height: 100%;
+}
+
+footer {
+	background-color: var(--main-color);
+	color: #fff;
+	padding: 20px 0;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+footer h1 {
+	font-family: AktivGrotesk-Medium !important;
+	font-style: normal;
+	font-weight: normal;
+}
+
+footer #social-group{
+	padding: 10px;
+}
+
+footer #social-group a{
+	text-decoration: none;
+	color: #fff;
+	margin: 0px 20px;
+}
+
+footer h2, footer h1 {
+	font-size: 12px;
+	margin: 20px 0;
+}
+
+#fixed-buy-block {
+	position: fixed;
+	bottom: 0;
+	/* left: 0; */
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* padding: 0; */
+	/* padding: 10px 0 10px 0; */
+	/* background-color: var(--main-color); */
+    
+}
+
+#fixed-buy-block .row {
+	background-color: rgb(24, 24, 24, .8);
+	width: 100%;
+	justify-content: center;
+	padding: 10px 0 10px 0;
+}
+
+.slide-down {
+	animation: slideDown .5s ease-out forwards;
+}
+
+.slide-up {
+	animation: slideUp .5s ease-in forwards;
+}
+
+#fixed-buy-block div{
+	display: flex;
+	justify-content: space-around;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#fixed-buy-block h2,
+#fixed-buy-block div button {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: AktivGrotesk-Regular !important;
+	font-style: normal;
+	font-weight: normal;
+}
+
+#fixed-buy-block div button {
+	width: 45%;
+    background-color: var(--main-color);
+}
+
+#fixed-buy-block h2 {
+	width: 80%;
+	margin-bottom: 20px;
+	justify-content: center;
+	font-size: 18px;
+}
+
+#fixed-buy-block div {
+	width: 100%;
+}
+
+#fixed-buy-block button {
+	border: 1px solid #fff;
+	border-radius: 2px;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+#fixed-buy-block #white-line {
+	height: 5px;
+	width: 135px;
+	background: #fff;
+	border-radius: 100px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 399px){
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	#first-slider-row .swiper-container {
+	    height: 140px;
+	}
+	
+	#first-slider-row .col-sm img {
+	    width: initial;
+	    height: 100%;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 359px) {
+	
+	#fixed-buy-block {
+		padding: 0;
+	}
+
+	h2 {
+		font-size: 16px;
+	}
+
+	#video-group h1 {
+		font-size: 16px;
+	}
+
+	#video-group .video-container {
+		justify-content: space-around !important;
+	}
+
+	#video-group .video-js {
+		width: 150px;
+		height: 150px;
+		line-height: 0;
+	}
+
+	#journey video {
+		height: auto;
+	}
+
+	.vjs-has-started .vjs-control-bar {
+		display: none;
+	}
+
+	footer {
+		padding-bottom: 120px;
+	}
+}
+
+@media only screen and (min-width: 360px) {
+    #first-slider-row .swiper-container {
+        height: 155px;
+    }
+    
+    #first-slider-row .col-sm img {
+        width: initial;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+	#fixed-buy-block {
+		padding: 0;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	#third-slider-row .product-quantity {
+		font-size: 14px;
+	}
+
+	#third-slider-row .product-price {
+		font-size: 15px;
+	}
+
+	#journey h1 {
+		font-size: 26px;
+	}
+
+	#video-group h1 {
+		font-size: 20px;
+	}
+
+	footer {
+		padding-bottom: 120px;
+	}
+
+	footer #social-group {
+		font-size: 22px;
+	}
+
+	footer h2, footer h1 {
+		font-size: 14px;
+	}
+	
+	#first-slider-row .swiper-container {
+	    height: 170px;
+	}
+	
+	#first-slider-row .col-sm img {
+	    width: initial;
+	    height: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#video-group .video-container {
+		max-height: 300px;
+	}
+
+	#video-group .video-js {
+		width: 300px;
+		height: 300px;
+		line-height: 0;
+	}
+	
+	#first-slider-row .swiper-container {
+	    height: 270px;
+	}
+	
+	#first-slider-row .col-sm img {
+	    width: initial;
+	    height: 100%;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	#first-slider-row,
+	#second-slider-row,
+	#win-now,
+	#journey{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	button {
+		width: 75%;
+	}
+
+	#first-slider-row .col-sm .swiper-container .swiper-button-next,
+	#first-slider-row .col-sm .swiper-container .swiper-button-prev,
+	#third-slider-row .swiper-container .swiper-button-next,
+	#third-slider-row .swiper-container .swiper-button-prev {
+		display: block;
+		color: var(--main-color-rgba) !important;
+		opacity: .6;
+	}
+	
+	body {
+	    padding-top: 60px;
+	}
+
+	#first-slider-row {
+		margin-bottom: 20px;
+	}
+
+	#first-slider-row .swiper-container {
+		padding-bottom: 0px;
+		position: relative;
+	}
+
+	#first-slider-row .col-sm .swiper-container .swiper-button-next,
+	#first-slider-row .col-sm .swiper-container .swiper-button-prev{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-top: 0;
+		width: auto;
+		height: auto;
+		padding: 10px 18px;
+		background-color: #fff;
+	}
+
+	.swiper-button-next:after, 
+	.swiper-button-prev:after {
+		font-size: 30px;
+	}
+
+	#first-slider-row .col-sm .swiper-container .swiper-button-next{ 
+		right: 0;	
+	}
+
+	#first-slider-row .col-sm .swiper-container .swiper-button-prev{
+		left: 0;
+	}
+
+	#first-slider-row .swiper-pagination,
+	#third-slider-row .swiper-pagination {
+		display: none;
+	}
+
+	#first-slider-row .swiper-button-next,
+	#first-slider-row .swiper-button-prev,
+	#third-slider-row .swiper-button-next,
+	#third-slider-row .swiper-button-prev {
+		display: block;
+	}
+
+	#second-slider-row{
+		height: 120px;
+		overflow: hidden;
+		margin-bottom: 45px;
+	}
+
+	#second-slider-row img {
+		display: none;
+	}
+
+	#win-now {
+		padding: 85px 0px;
+	}
+
+	#win-now h2 {
+		font-size: 26px;
+	}
+
+	#win-now button {
+		width: 150px;
+		font-size: 16px;
+	}
+
+	#journey video {
+		height: auto;
+	}
+
+	#video-group .video-container {
+		max-height: initial;
+		height: 405px;
+		justify-content: space-between !important;
+	}
+
+	#video-group #video-group-first {
+		order: 2;
+	}
+
+	#video-group .video-container:last-child .video-text-group {
+		order: 2;
+	}
+
+	#video-group .padding-left-15 {
+		padding-left: 0;
+	}
+
+	#video-group .video-container {
+		max-height: 340px;
+	}
+
+	#video-group .video-js {
+		width: 340px;
+		height: 100%;
+		line-height: 0;
+	}
+
+	#video-group .video-text-group {
+		width: 340px;
+	}
+
+	#video-group h1 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	#video-group .video-text-group .description {
+		display: block;
+		font-family: AktivGrotesk-Regular;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+    	line-height: 20px;
+		text-align: center;
+		color: var(--main-color);
+	}
+
+	#fixed-buy-block {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#fixed-buy-block .row{
+		padding: 20px 0 10px 0;
+	}
+
+	#fixed-buy-block div {
+		width: 650px;
+		justify-content: space-between;
+	}
+
+	#fixed-buy-block h2 {
+		font-size: 24px;
+	}
+
+	#fixed-buy-block div button {
+		width: 300px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#video-group .video-container {
+		height: 450px;
+		max-height: 450px;
+	}
+
+	#video-group #video-group-first {
+		width: 450px;
+	}
+
+	#video-group .video-text-group {
+		width: 450px;
+	}
+
+	#video-group .video-js {
+		width: 450px;
+	}
+	
+	#first-slider-row .swiper-container {
+	    height: 310px;
+	}
+	
+	#first-slider-row .col-sm img {
+	    width: initial;
+	    height: 100%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#video-group .video-container {
+		height: 540px;
+		max-height: none;
+	}
+
+	#video-group .video-js {
+		width: 540px;
+		height: 100%;
+		max-height: none;
+		max-width: none;
+	}
+
+	#video-group #video-group-first {
+		width: 540px;
+	}
+
+	#video-group .video-text-group {
+		width: 540px;
+	}
+	
+	#first-slider-row .swiper-container {
+	    height: 370px;
+	}
+	
+	#first-slider-row .col-sm img {
+	    width: initial;
+	    height: 100%;
+	}
+}</style></head>
+  <body>
+    <nav class="navbar navbar-custom justify-content-center fixed-top">
+      <a class="navbar-brand" href="https://www.loreal.com/" target="_blank">
+        <!-- images/brand_logo.png -->
+        <img src="25d7d998dd925bacfbce2e44e00f1f571c519268_1600938244_brand_logo.png" width="227" height="25" alt="" loading="logo">
+      </a>
+    </nav>
+
+    <div class="container">
+      <div class="row" id="first-slider-row">
+        <div class="col-sm">
+          <div class="swiper-container" id="first-slider">
+            <div class="swiper-wrapper" id="first-slider-wrapper">
+              [{"img":"https://www.armanibeauty.com/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-armani-global-Library/default/dwb5d5ba48/plp/fragrance/CategoryBanner_Acqua_Di_Gio_Profondo_2019-1920x524.jpg"},{"img":"https://s3.eu-central-1.amazonaws.com/mediasales/assets/1/hu-HU/background/carousel-1.png"},{"img":"https://www.armanibeauty.com/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-armani-global-Library/default/dw8913cde5/plp/fragrance/CategoryBanner_Si-Passione-Intense_Cate_1920x524.jpg"}]
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div> 
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="second-slider-row" style="background-image: url(0b2870b783ecf8dbbf0596d407f5891c9c923ca3_1600938363_my_way.jpg);"> <!-- images/my_way.jpg -->
+        <img src="0b2870b783ecf8dbbf0596d407f5891c9c923ca3_1600938363_my_way.jpg" alt=""> <!-- images/my_way.jpg -->
+      </div>
+
+      <div class="row" id="third-slider-row">
+        <div class="swiper-container" id="third-slider">
+          <div class="swiper-wrapper" id="third-slider-wrapper">
+            
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <!-- ./images/Screenshot\ from\ 2020-08-10\ 16-30-09\ 1.png -->
+      <div class="row d-flex flex-column align-items-center" id="win-now" style="background-image: url(https://www.armanibeauty.com/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-armani-global-Library/default/dw55bb5696/landing-pages/prive/IRIS-CELADON_INGREDIENT-1280x640_v2.jpg?sw=1920);">
+        <img src="https://www.armanibeauty.com/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-armani-global-Library/default/dw55bb5696/landing-pages/prive/IRIS-CELADON_INGREDIENT-1280x640_v2.jpg?sw=1920" style="display: none">
+        <h2>Gana ahora</h2>
+        <button onclick="window.open('https://www.loreal.com/en/')">Haga clic aquí</button>
+      </div>
+
+      <div class="row flex-column" id="journey">
+          <!-- <h1>Discover this unique Journey</h1> -->
+          <h1>Descubra este viaje único</h1>
+          <video id="journey-video" class="video-js" poster="b84743c414394b312f5bf4a27ff7c0ad4b0797fe_1600938363_video_3_poster.png" playsinline>
+            <!-- videos/16_9.mp4 -->
+              <source src="d64a17c3b2a4f9d8562d938b4ad875f045f4ab5e_1600939092_16_9.mp4" type="video/mp4">
+          </source></video>
+      </div>
+
+      <div class="row flex-column" id="video-group">
+        <div class="d-flex justify-content-around align-items-center video-container padding-left-15">
+          <video id="video-group-first" class="video-js" poster="b77fb6b482435d97ceb0066565c28c52f19d409b_1600938363_video_2_poster.png" playsinline>
+            <!-- videos/MY WAY_DISPLAY_BANNER 2_BIM-300x600_anim.mp4 -->
+            <source src="8de608aaef7707e036b878b9d6e3a4dd701d7f87_1600939093_2020_MY_WAY_EDP_ENCOUNTER_CAPSULE_10s_16.9.mp4" type="video/mp4">
+          </source></video>
+          <div class="video-text-group">
+            <!-- The Bottle & Juice -->
+            <h1>The Bottle & Juice</h1>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipiscing elit. Eu eu ullamcorper arcu morbi pertium et. Suspendisse ut quisque molestie malesuada et lorem tincidunt at blandit. Nulla blandit eget eleifend vitae eu mauris.</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around align-items-center video-container padding-right-15">
+          <div class="video-text-group">
+            <!-- Our Commitment -->
+            <h1>Nuestro compromiso</h1>
+            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu ullamcorper arcu morbi pretium, et. Suspendisse ut quisque molestie malesuada et lorem tincidunt at blandit. Nulla blandit eget eleifend vitae eu mauris. -->
+            <p class="description">Lorem ispum dolor sit amet consectetur adipiscing elit. Eu eu ullamcroper arcu morbi pretium et. Suspendisse ut quisque molestie malesuada et lorem tincidunt at blandit. Nulla blandit eget eleifend vitae eu mauris.</p>
+          </div>
+          <video id="video-group-second" class="video-js" poster="6fa6cfc965ffbd778bcb6e030993fb93fe61db54_1600938363_video_1_poster.png" playsinline>
+            <!-- videos/2020_MY_WAY_EDP_ON_MY_WAY_CAPSULE_10s_4.5.mp4 -->
+              <source src="11b003ce56aa9a724634e646d4d7349fdd3a5f4f_1600939093_2020_MY_WAY_EDP_ON_MY_WAY_CAPSULE_10s_4.5.mp4" type="video/mp4">
+          </source></video>
+        </div>
+      </div>
+    </div>
+
+    <div id="fixed-buy-block" class="container">
+      <div class="row">
+        <!-- <h2>Collect when you fly</h2> -->
+        <h2>Recoge cuando vuelas</h2>
+        <div>
+          <!-- <button>Shop Now</button> -->
+          <button onclick="window.open('https://www.loreal.com/en/articles/my-way-armani/')">Compra ahora</button>
+          <!-- <button>Add To Wallet</button> -->
+          <button onclick="window.open('https://www.loreal.com/en/articles/my-way-armani/')">Agregar a la billetera</button>
+        </div>
+      </div>
+      <!-- <div id="white-line"></div> -->
+    </div>
+
+    <footer class="row flex-column justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center" id="social-group">
+        <a href="https://www.instagram.com/loreal/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/lorealhungary/?brand_redir=499580396772295" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCgmvz6qxtga4W6n1mfmM0Zw" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+      </div>
+      <h1>Terms&amp;Conditions</h1>
+      <h1>&copy; 2020 - ALL RIGHTS RESERVED</h1>
+    </footer>
+
+    <!-- Version: 1.0.0 -->
+
+    <!-- jQuery slim minified -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- Popper js minified -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!-- Bootstrap js minified -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Swiper.js (Carousels) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Video.js -->
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    <!-- Custom js -->
+    <script>// var isMobile = window.matchMedia("only screen and (max-width: 900px)").matches;
+
+// function initSliders() {
+//     var howManySlidesToShow;
+
+//     if(!isMobile) {
+//         howManySlidesToShow = 4;   
+//     }else {
+//         howManySlidesToShow = 2; 
+//     }
+
+//     var swiperFirst = new Swiper('#first-slider', {
+//         loop: true,
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         }
+//     });
+    
+//     var swiperThird = new Swiper('#third-slider', {
+//         slidesPerView: 2,
+//         spaceBetween: 0,
+//         slidesPerGroup: 2,
+//         loop: true,
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         },
+//         breakpoints: {
+//             320: {
+//               slidesPerView: 2,
+//               slidesPerGroup: 2
+//             },
+//             640: {
+//               slidesPerView: 3,
+//               slidesPerGroup: 3
+//             },
+//             900: {
+//               slidesPerView: 4,
+//               slidesPerGroup: 4
+//             }
+//         }
+//     });
+// }
+
+// function pausePlay(e) {
+//     if(e.target.nodeName.toLowerCase() !== 'video') return;
+
+//     if(this.paused()) {
+//         this.play();
+//     }else {
+//         this.pause();
+//     }
+// }
+
+// function initVideos() {
+//     var mute = false;
+
+//     if(!isMobile) {
+//         mute = false;
+//     }else {
+//         mute = true;
+//     }
+
+//     var journey = videojs('journey-video', {
+//         controls: true,
+//         muted: mute
+//     });
+
+//     var videoGroupFirst = videojs('video-group-first', {
+//         controls: true,
+//         muted: mute
+//     });
+
+//     var videoGroupSecond = videojs('video-group-second', {
+//         controls: true,
+//         muted: mute
+//     });
+
+//     journey.on('touchstart', pausePlay);
+//     videoGroupFirst.on('touchstart', pausePlay);
+//     videoGroupSecond.on('touchstart', pausePlay);
+    
+// }
+
+// function getJson(elementId) {
+//     var element = document.getElementById(elementId);
+//     var json = element.innerHTML.trim().replace(/&nbsp;/gi, " ");
+//     element.innerHTML = '';
+//     return json;
+// }
+
+// function appendDynamicElements(imagesJson, productsJson) {
+//     try {
+//         var imagesData = JSON.parse(imagesJson);
+//         var productsData = JSON.parse(productsJson);
+
+//         appendImages(imagesData);
+//         appendProducts(productsData);
+//     } catch(err) {
+//         console.error(err);
+//     }
+// }
+
+// function appendImages(imagesObj) {
+//     var firstCarouselInnerWrapper = document.getElementById('first-slider-wrapper');
+//     imagesObj.forEach( function(obj) {
+//         var src = obj.img;
+
+//         var div = document.createElement('div');
+//         div.className = 'swiper-slide';
+
+//         var img = document.createElement('img');
+//         img.src = src;
+
+//         div.appendChild(img);
+//         firstCarouselInnerWrapper.appendChild(div);
+//     });
+// }
+
+// function appendProducts(productsObj) {
+//     var thirdCarouselInnerWrapper = document.getElementById('third-slider-wrapper');
+//     productsObj.forEach( function(obj) {
+//         var div = document.createElement('div');
+//         div.className = 'swiper-slide d-flex flex-column justify-content-center align-items-center';
+
+//         var img = document.createElement('img');
+//         img.src = obj.productImage;
+
+//         var productName_h2 = document.createElement('h2');
+//         productName_h2.className = 'product-name';
+//         productName_h2.textContent = obj.productName;
+
+//         var productQuantity_h2 = document.createElement('h2');
+//         productQuantity_h2.className = 'product-quantity';
+//         productQuantity_h2.textContent = obj.productQuantity;
+
+//         var productPrice_h2 = document.createElement('h2');
+//         productPrice_h2.className = 'product-price';
+//         productPrice_h2.textContent = obj.productPrice;
+
+//         var button = document.createElement('button');
+//         button.textContent = 'Buy now';
+//         button.onclick = function() {
+//             window.open(obj.productRedirectUrl);
+//         }
+
+//         div.appendChild(img);
+//         div.appendChild(productName_h2);
+//         div.appendChild(productQuantity_h2);
+//         div.appendChild(productPrice_h2);
+//         div.appendChild(button);
+//         thirdCarouselInnerWrapper.appendChild(div);
+//     });
+// }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var firstCarouselImagesJson = getJson('first-slider-wrapper');
+//     var thirdCarouseJson = getJson('third-slider-wrapper');
+
+//     appendDynamicElements(firstCarouselImagesJson, thirdCarouseJson);
+    
+//     initSliders();
+//     initVideos();
+    
+//     window.addEventListener('resize', function() {
+//       initSliders(); 
+//     });
+// });
+var isMobile = window.matchMedia("only screen and (max-width: 900px)").matches;
+
+function initSliders() {
+    var howManySlidesToShow;
+
+    if(!isMobile) {
+        howManySlidesToShow = 4;   
+    }else {
+        howManySlidesToShow = 2; 
+    }
+
+    var swiperFirst = new Swiper('#first-slider', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+    
+    var swiperThird = new Swiper('#third-slider', {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        slidesPerGroup: 2,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+              slidesPerView: 2,
+              slidesPerGroup: 2
+            },
+            640: {
+              slidesPerView: 3,
+              slidesPerGroup: 3
+            },
+            900: {
+              slidesPerView: 4,
+              slidesPerGroup: 4
+            }
+        }
+    });
+}
+
+function pausePlay(e) {
+    if(e.target.nodeName.toLowerCase() !== 'video') return;
+
+    if(this.paused()) {
+        this.play();
+    }else {
+        this.pause();
+    }
+}
+
+function initVideos() {
+    var mute = false;
+
+    if(!isMobile) {
+        mute = false;
+    }else {
+        mute = true;
+    }
+
+    var journey = videojs('journey-video', {
+        controls: true,
+        muted: mute
+    });
+
+    var videoGroupFirst = videojs('video-group-first', {
+        controls: true,
+        muted: mute
+    });
+
+    var videoGroupSecond = videojs('video-group-second', {
+        controls: true,
+        muted: mute
+    });
+
+    journey.on('touchstart', pausePlay);
+    videoGroupFirst.on('touchstart', pausePlay);
+    videoGroupSecond.on('touchstart', pausePlay);
+    
+    journey.on('error', function() {
+        // document.querySelector('#journey-video').style.display = 'none'; 
+        var j = document.querySelector('#journey-video');
+        j.parentNode.removeChild(j);
+    });
+    
+    videoGroupFirst.on('error', function() {
+        var vGF = document.querySelector('#video-group-first');
+        // document.querySelector('#video-group-first').style.display = 'none'; 
+        vGF.parentNode.removeChild(vGF);
+    });
+    
+    videoGroupSecond.on('error', function() {
+        var vGS = document.querySelector('#video-group-second');
+        // document.querySelector('#video-group-second').style.display = 'none';
+        vGS.parentNode.removeChild(vGS);
+    });
+    
+}
+
+function getJson(elementId) {
+    var element = document.getElementById(elementId);
+    var json = element.innerHTML.trim().replace(/&nbsp;/gi, " ");
+    element.innerHTML = '';
+    return json;
+}
+
+function appendDynamicElements(imagesJson, productsJson) {
+    try {
+        var imagesData = JSON.parse(imagesJson);
+        appendImages(imagesData);
+    } catch(err) {
+        console.error(err);
+    }
+    
+    try {
+        var productsData = JSON.parse(productsJson);
+        appendProducts(productsData);
+    } catch(err) {
+        console.error(err);
+    }
+}
+
+function appendImages(imagesObj) {
+    var firstCarouselInnerWrapper = document.getElementById('first-slider-wrapper');
+    imagesObj.forEach( function(obj) {
+        var src = obj.img;
+
+        var div = document.createElement('div');
+        div.className = 'swiper-slide';
+
+        var img = document.createElement('img');
+        img.src = src;
+
+        div.appendChild(img);
+        firstCarouselInnerWrapper.appendChild(div);
+    });
+}
+
+function appendProducts(productsObj) {
+    var thirdCarouselInnerWrapper = document.getElementById('third-slider-wrapper');
+    productsObj.forEach( function(obj) {
+        var div = document.createElement('div');
+        div.className = 'swiper-slide d-flex flex-column justify-content-center align-items-center';
+
+        var img = document.createElement('img');
+        img.src = obj.productImage;
+
+        var productName_h2 = document.createElement('h2');
+        productName_h2.className = 'product-name';
+        productName_h2.textContent = obj.productName;
+
+        var productQuantity_h2 = document.createElement('h2');
+        productQuantity_h2.className = 'product-quantity';
+        productQuantity_h2.textContent = obj.productQuantity;
+
+        var productPrice_h2 = document.createElement('h2');
+        productPrice_h2.className = 'product-price';
+        productPrice_h2.textContent = obj.productPrice;
+
+        var button = document.createElement('button');
+        button.textContent = 'Buy now';
+        button.onclick = function() {
+            window.open(obj.productRedirectUrl);
+        }
+
+        div.appendChild(img);
+        div.appendChild(productName_h2);
+        div.appendChild(productQuantity_h2);
+        div.appendChild(productPrice_h2);
+        div.appendChild(button);
+        thirdCarouselInnerWrapper.appendChild(div);
+    });
+}
+
+function validateCarousels() {
+    var nodes = [
+        {
+            element: '#first-slider-wrapper',
+            parentToHide: '#first-slider-row'
+        },
+        {
+            element: '#third-slider-wrapper',
+            parentToHide: '#third-slider-row'
+        }
+    ];
+
+    for(var i = 0; i < nodes.length; i++) {
+        var elem = document.querySelector(nodes[i].element);
+
+        if(elem) {
+            if(elem.innerHTML.trim() === '') {
+                var parent = document.querySelector(nodes[i].parentToHide);
+                
+                if(parent){
+                    parent.style.display = 'none';
+                    // parent.parentNode.removeChild(parent);
+                }
+            }
+        }
+    }
+}
+
+function validateImgs() {
+    var nodes = [
+        {
+            element: '#second-slider-row img',
+            elemToHide: '#second-slider-row'
+        },
+        {
+            element: '#win-now img',
+            elemToHide: '#win-now'
+        }
+    ];
+
+    for(var i = 0; i < nodes.length; i++) {
+        var img = document.querySelector(nodes[i].element);
+        var parentToHide = document.querySelector(nodes[i].elemToHide);
+        
+        if(img.src.indexOf('.jpg') < 0 && img.src.indexOf('.png') < 0) {
+            // parentToHide.style.display = 'none';
+            parentToHide.parentNode.removeChild(parentToHide);
+        }
+        
+        img.onerror = function() {
+            // parentToHide.style.display = 'none';
+            parentToHide.parentNode.removeChild(parentToHide);
+        }
+        
+        // if(parentToHide.classList.contains('d-flex')) {
+        //     parentToHide.classList.remove('d-flex');
+        // }
+    }
+}
+
+function validateTexts() {
+    var nodes = [
+        {
+            element: '#win-now h2'
+        },
+        {
+            element: '#win-now button'
+        },
+        {
+            element: '#journey h1'
+        },
+        {
+            element: '#video-group div:first-child div.video-text-group h1'
+        },
+        {
+            element: '#video-group div:first-child div.video-text-group p'
+        },
+        {
+            element: '#video-group div:last-child div.video-text-group h1'
+        },
+        {
+            element: '#video-group div:last-child div.video-text-group p'
+        },
+        {
+            element: '#fixed-buy-block h2'
+        },
+        {
+            element: '#fixed-buy-block div button:first-child'
+        },
+        {
+            element: '#fixed-buy-block div button:last-child'
+        }
+    ];
+
+    for(var i = 0; i < nodes.length; i++) {
+        var text = document.querySelector(nodes[i].element);
+        if(text) {
+            if(text.innerHTML.trim() == '') {
+                // text.style.display = 'none';
+                text.parentNode.removeChild(text);
+            }   
+        }
+    }
+    
+    var textGroups = [
+        {
+            element: '#video-group > div:first-child div.video-text-group'
+        },
+        {
+            element: '#video-group > div:last-child div.video-text-group'
+        }
+    ];
+    
+    for(var i = 0; i < textGroups.length; i++) {
+        var div = document.querySelector(textGroups[i].element);
+        var children = div.children;
+        // var hiddenChilds = 0;
+        
+        // for(var k = 0; k < children.length; k++) {
+        //     if(children[k].style.display == 'none') {
+        //         hiddenChilds++;
+        //     }
+        // }
+        
+        // if(hiddenChilds == children.length) {
+        //     // div.style.display = 'none';
+        //     div.parentNode.removeChild(div);
+        // }
+        
+        if(children.length == 0) {
+            div.parentNode.removeChild(div);
+        }
+    }
+    
+}
+
+function valideVideoGroupChilds() {
+    var nodes = [
+        {
+            element: '#video-group > div:first-child'
+        },
+        {
+            element: '#video-group > div:last-child'
+        }
+    ]
+    
+    for(var i = 0; i < nodes.length; i++) {
+        var div = document.querySelector(nodes[i].element);
+        var children = div.children;
+        
+        if(children.length == 0) {
+            div.parentNode.removeChild(div);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    validateCarousels();
+    validateImgs();
+    validateTexts();
+    
+    var firstCarouselImagesJson = getJson('first-slider-wrapper');
+    var thirdCarouseJson = getJson('third-slider-wrapper');
+    appendDynamicElements(firstCarouselImagesJson, thirdCarouseJson);
+    
+    initSliders();
+    initVideos();
+    setTimeout(function() {
+        valideVideoGroupChilds();
+    }, 500);
+});
+</script>
+  </body>
+</html>
