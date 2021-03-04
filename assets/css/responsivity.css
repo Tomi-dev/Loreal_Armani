@@ -1,0 +1,83 @@
+@media only screen and (max-width: 1024px) {
+    .description {
+        font-size: 17px;
+        line-height: 22px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header-div h1 {
+        font-size: 20px;
+    }
+
+    .list-img-container{
+        flex-direction: column;
+    }
+
+    .list-img-container .img-container {
+        width: 100%;
+    }
+
+    .list-description .description {
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .list-description .description .desc-img-container,
+    .list-description .description .desc-details {
+        width: 100%;
+    }
+
+    .list-description .description.desc-1 .desc-details {
+        padding-top: 0;
+    }
+
+    /* .beauty-experts-container {
+        flex-direction: row;
+    } */
+
+    .beauty-experts-container .beauty-expert {
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: auto;
+    }
+
+    .beauty-experts-container .beauty-expert p {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .beauty-experts-container .btn-container button {
+        font-size: 20px;
+    }
+
+    .faq {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #fixed-buy-block div.btn-holder {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        padding-bottom: 140px;
+    }
+
+    .beauty-experts-container {
+        flex-direction: column;
+    }
+
+    .beauty-experts-container div.beauty-expert:first-child {
+        margin-bottom: 20px;
+    }
+
+    .beauty-experts-container div.beauty-expert {
+        width: 80%;
+    }
+}

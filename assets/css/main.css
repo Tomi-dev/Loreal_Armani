@@ -63,7 +63,7 @@ html, body {
 
 body {
 	opacity: 0;
-	animation: fadeIn .5s 1s ease-in forwards;
+	animation: fadeIn .5s .5s ease-in forwards;
 }
 
 h2 {
@@ -387,7 +387,7 @@ footer h2, footer h1 {
 	animation: slideUp .5s ease-in forwards;
 }
 
-#fixed-buy-block div{
+#fixed-buy-block div.btn-holder{
 	display: flex;
 	justify-content: space-around;
 	padding-left: 10px;
@@ -399,9 +399,16 @@ footer h2, footer h1 {
 	color: #fff;
 	text-align: center;
 	margin-bottom: 10px;
-	font-family: AktivGrotesk-Regular !important;
+	font-family: 'didot';
 	font-style: normal;
 	font-weight: normal;
+}
+
+#fixed-buy-block #shopNow .bx_bn_button.use_bx_ico,
+#fixed-buy-block #addToWallet .bx_bn_button.use_bx_ico {
+	font-family: 'didot';
+    background-color: var(--main-color);
+    border: 1px solid #fff;
 }
 
 #fixed-buy-block div button {
@@ -416,7 +423,7 @@ footer h2, footer h1 {
 	font-size: 18px;
 }
 
-#fixed-buy-block div {
+#fixed-buy-block div.btn-holder {
 	width: 100%;
 }
 
@@ -717,7 +724,7 @@ footer h2, footer h1 {
 		padding: 20px 0 10px 0;
 	}
 
-	#fixed-buy-block div {
+	#fixed-buy-block div.btn-holder {
 		width: 650px;
 		justify-content: space-between;
 	}
@@ -929,9 +936,8 @@ footer h2, footer h1 {
 }
 
 .beauty-experts-container .beauty-expert img {
-    max-height: 300px;
-    width: 100%;
-    object-fit: cover;
+    width: 70%;
+	margin: auto;
 }
 
 .beauty-experts-container .beauty-expert h1 {
@@ -953,7 +959,9 @@ footer h2, footer h1 {
     text-align: center;
 }
 
-.beauty-experts-container .btn-container button {
+.beauty-experts-container .btn-container button,
+.beauty-experts-container #bookNow .bx_bn_button.use_bx_ico {
+	display: inline-block;
     color: #fff;
     background-color: rgba(1, 13, 37, 1);
     border: none;
@@ -961,6 +969,11 @@ footer h2, footer h1 {
     font-weight: bold;
     font-size: 30px;
     padding: 5px 20px;
+	text-transform: uppercase;
+}
+
+.beauty-experts-container #bookNow .bx_bn_button.use_bx_ico:after {
+	display: none;
 }
 
 .faq {
@@ -987,4 +1000,24 @@ footer h2, footer h1 {
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+#fixed-buy-block #shopNow,
+#fixed-buy-block #addToWallet {
+	width: 300px;
+}
+
+#fixed-buy-block #shopNow div,
+#fixed-buy-block #addToWallet div {
+	width: 100%;
+} 
+
+#fixed-buy-block #shopNow div:after,
+#fixed-buy-block #addToWallet div:after {
+	display: none;
+}
+
+#fixed-buy-block #shopNow div.bx_bn_button.use_bx_ico,
+#fixed-buy-block #addToWallet div.bx_bn_button.use_bx_ico {
+	padding: 5px 20px 5px 20px;
 }
