@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico">
     <title>Armani</title>
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
     <!-- Bootstrap 4+ css minified -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -32,25 +31,19 @@
           bnHandler.createBookingButton('bookNow', {
             buttonText: "Book Now"
           });
-          bnHandler.createBookingButton('shopNow', {
-            buttonText: "Shop Now"
-          });
-          bnHandler.createBookingButton('addToWallet', {
-            buttonText: "Add To Wallet"
-          });
         };
       </script>
 
     <nav class="navbar navbar-custom justify-content-center fixed-top">
       <a class="navbar-brand" href="https://www.loreal.com/" target="_blank">
-        <img src="assets/img/logo.png" width="227" height="25" alt="" loading="logo">
+        <img src="assets/img/logo.svg" alt="">
       </a>
     </nav>
 
     <div class="container-fluid">
       <div class="row">
           <div class="col-12">
-            <img class="main-img" src="assets/img/BANNIERE1024_1.jpg" alt="">
+            <img class="main-img" src="assets/img/BANNIERE1024_1.webp" alt="">
           </div>
 
           <div class="col-12 description">
@@ -66,17 +59,17 @@
 
           <div class="col-12 list-img-container">
               <div class="img-container">
-                <img class="list-img list-img-1" src="assets/img/IMAGE1.jpg" alt="">
+                <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
                 <p>THE ARMANI GAZE</p>
               </div>
 
               <div class="img-container">
-                <img class="list-img list-img-1" src="assets/img/IMAGE3.jpg" alt="">
+                <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
                 <p>THE PERFECT COMPLEXION</p>
               </div>
 
               <div class="img-container">
-                <img class="list-img list-img-1" src="assets/img/IMAGE2.jpg" alt="">
+                <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
                 <p>THE RED CARPET LOOK</p>
               </div>
           </div>
@@ -84,7 +77,7 @@
           <div class="col-12 list-description">
             <div class="description desc-1">
                 <div class="desc-img-container">
-                    <img class="list-img list-img-1" src="assets/img/IMAGE1.jpg" alt="">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
                 </div>
                 <div class="desc-details">
                     <h1>THE ARMANI GAZE</h1>
@@ -105,7 +98,7 @@
             </div>
             <div class="description desc-2">
                 <div class="desc-img-container">
-                    <img class="list-img list-img-1" src="assets/img/IMAGE3.jpg" alt="">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
                 </div>
                 <div class="desc-details">
                     <h1>THE PERFECT COMPLEXION</h1>
@@ -125,7 +118,7 @@
             </div>
             <div class="description desc-1">
                 <div class="desc-img-container">
-                    <img class="list-img list-img-1" src="assets/img/IMAGE2.jpg" alt="">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
                 </div>
                 <div class="desc-details">
                     <h1>THE RED CARPET LOOK</h1>
@@ -151,21 +144,18 @@
 
           <div class="col-12 beauty-experts-container">
             <div class="beauty-expert">
-                <img src="assets/img/Bhavesh.jpg" alt="">
+                <img src="assets/img/Bhavesh.webp" alt="">
                 <h1>BHAVESH</h1>
                 <p>Bhavesh’s goal is to make customers feel
                     comfortable with the makeup they wear
                     and to achieve their dream look</p>
             </div>
             <div class="beauty-expert">
-                <img src="assets/img/Wahib.jpg" alt="">
+                <img src="assets/img/Wahib.webp" alt="">
                 <h1>WAHIB</h1>
                 <p>In line with Armani Beauty core values,
                     Wahib’s objective is to enhance every
                     women's natural beauty.</p>
-            </div>
-            <div class="btn-container">
-                <div id="bookNow"></div>
             </div>
           </div>
 
@@ -209,8 +199,7 @@
       <div class="row">
         <h2>Collect when you fly</h2>
         <div class="btn-holder">
-          <div id="shopNow"></div>
-          <div id="addToWallet"></div>
+          <div id="bookNow"></div>
         </div>
       </div>
       
@@ -225,17 +214,5 @@
       <h1>Terms&amp;Conditions</h1>
       <h1>&copy; 2020 - ALL RIGHTS RESERVED</h1>
     </footer>
-
-    <!-- jQuery slim minified -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <!-- Popper js minified -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <!-- Bootstrap js minified -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!-- Swiper.js (Carousels) -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Video.js -->
-    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
-    <!-- Custom js -->
   </body>
 </html>
