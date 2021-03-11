@@ -62,7 +62,7 @@
     }
 
     footer {
-        padding-bottom: 140px;
+        padding-bottom: 60px;
     }
 
     .beauty-experts-container {
@@ -75,5 +75,56 @@
 
     .beauty-experts-container div.beauty-expert {
         width: 80%;
+    }
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+   .description {
+       font-size: 24px;
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+   .description {
+       font-size: 28px;
+   }
+}
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
     }
 }

@@ -525,7 +525,8 @@ footer h2, footer h1 {
 	color: #fff;
 	text-align: center;
 	margin-bottom: 10px;
-	font-family: 'didot';
+	/* font-family: 'didot'; */
+	font-family: 'GFS Didot', serif;
 	font-style: normal;
 	font-weight: normal;
 }
@@ -533,7 +534,8 @@ footer h2, footer h1 {
 #fixed-buy-block #shopNow .bx_bn_button.use_bx_ico,
 #fixed-buy-block #addToWallet .bx_bn_button.use_bx_ico,
 #fixed-buy-block #bookNow .bx_bn_button.use_bx_ico {
-	font-family: 'didot';
+	/* font-family: 'didot'; */
+	font-family: 'GFS Didot', serif;
     background-color: var(--main-color);
     border: 1px solid #fff;
 }
@@ -658,7 +660,7 @@ footer h2, footer h1 {
 	}
 
 	footer {
-		padding-bottom: 120px;
+		padding-bottom: 60px;
 	}
 
 	footer #social-group {
@@ -920,14 +922,15 @@ footer h2, footer h1 {
 }
 
 /* New site */
-@font-face {
+/* @font-face {
     font-family: didot;
-    src: url(../fonts/Didot-01.ttf);
-}
+    src: url(../fonts/Didot-01.woff);
+} */
 
 @font-face {
     font-family: futura;
     src: url(../fonts/FuturaBQLight.otf);
+	font-display: swap;
 }
 
 .container-fluid,
@@ -943,7 +946,8 @@ footer h2, footer h1 {
 }
 
 .description {
-    font-family: 'didot';
+    /* font-family: 'didot'; */
+	font-family: 'GFS Didot', serif;
     font-size: 30px;
     line-height: 38px;
     font-weight: 600;
@@ -980,7 +984,8 @@ footer h2, footer h1 {
 }
 
 .list-img-container .img-container p {
-    font-family: 'didot';
+    /* font-family: 'didot'; */
+	font-family: 'GFS Didot', serif;
     text-transform: uppercase;
     margin-bottom: 0;
     padding: 20px 0;
@@ -1063,7 +1068,8 @@ footer h2, footer h1 {
 }
 
 .beauty-experts-container .beauty-expert h1 {
-    font-family: 'didot';
+    /* font-family: 'didot'; */
+	font-family: 'GFS Didot', serif;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -1087,7 +1093,8 @@ footer h2, footer h1 {
     color: #fff;
     background-color: rgba(1, 13, 37, 1);
     border: none;
-    font-family: 'didot';
+    /* font-family: 'didot'; */
+	font-family: 'GFS Didot', serif;
     font-weight: bold;
     font-size: 30px;
     padding: 5px 20px;
