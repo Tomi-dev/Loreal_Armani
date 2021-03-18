@@ -119,13 +119,13 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .description {
+    .list-description .description {
        font-size: 24px;
        margin-top: 0;
        margin-bottom: 0 !important;
     }
    
-    .description:last-child {
+    ..list-description .description:last-child {
        margin-bottom: 20px !important;
     }
 
@@ -162,5 +162,10 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .list-description .description.desc-2 .desc-img-container {
+        order: 2;
+    }
+}
 
 
