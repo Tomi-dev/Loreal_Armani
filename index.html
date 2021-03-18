@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico">
     <title>Armani</title>
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-    <!-- Bootstrap 4+ css minified -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -32,25 +32,22 @@
           bnHandler.createBookingButton('bookNow', {
             buttonText: "Book Now"
           });
-          bnHandler.createBookingButton('shopNow', {
-            buttonText: "Shop Now"
-          });
-          bnHandler.createBookingButton('addToWallet', {
-            buttonText: "Add To Wallet"
-          });
         };
       </script>
 
     <nav class="navbar navbar-custom justify-content-center fixed-top">
       <a class="navbar-brand" href="https://www.loreal.com/" target="_blank">
-        <img src="assets/img/logo.png" width="227" height="25" alt="" loading="logo">
+        <img src="assets/img/logo.svg" alt="">
       </a>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
           <div class="col-12">
-            <img class="main-img" src="assets/img/BANNIERE1024_1.jpg" alt="">
+            <picture>
+              <source srcset="assets/img/BANNIERE1024_1.jpg" type="image/jpeg">
+              <img class="main-img" src="assets/img/BANNIERE1024_1.webp" alt="">
+            </picture>
           </div>
 
           <div class="col-12 description">
@@ -65,26 +62,38 @@
           </div>
 
           <div class="col-12 list-img-container">
-              <div class="img-container">
-                <img class="list-img list-img-1" src="assets/img/IMAGE1.jpg" alt="">
-                <p>THE ARMANI GAZE</p>
+              <div class="img-container click-to-description" data-id="armani_gaze">
+                <picture>
+                  <source srcset="assets/img/IMAGE1.webp" type="image/jpeg">
+                  <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
+                </picture>
+                <p>THE ARMANI <br> GAZE</p>
               </div>
 
-              <div class="img-container">
-                <img class="list-img list-img-1" src="assets/img/IMAGE3.jpg" alt="">
+              <div class="img-container click-to-description" data-id="perfect_complexion">
+                <picture>
+                  <source srcset="assets/img/IMAGE3.jpg" type="image/jpeg">
+                  <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
+                </picture>
                 <p>THE PERFECT COMPLEXION</p>
               </div>
 
-              <div class="img-container">
-                <img class="list-img list-img-1" src="assets/img/IMAGE2.jpg" alt="">
+              <div class="img-container click-to-description" data-id="red_carpet">
+                <picture>
+                  <source srcset="assets/img/IMAGE2.jpg" type="image/jpeg">
+                  <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
+                </picture>
                 <p>THE RED CARPET LOOK</p>
               </div>
           </div>
 
           <div class="col-12 list-description">
-            <div class="description desc-1">
+            <div class="description desc-1" id="armani_gaze">
                 <div class="desc-img-container">
-                    <img class="list-img list-img-1" src="assets/img/IMAGE1.jpg" alt="">
+                  <picture>
+                    <source srcset="assets/img/IMAGE1.jpg" type="image/jpeg">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
+                  </picture>
                 </div>
                 <div class="desc-details">
                     <h1>THE ARMANI GAZE</h1>
@@ -100,12 +109,15 @@
                     <p><span class="highlight">Level: </span>Any</p>
                     <p><span class="highlight">Recommended material: </span>Eye shadows
                         (powder or liquid), eye brushes, eye
-                        pencil/liner mascara</p>
+                        pencil/liner and mascara</p>
                 </div>
             </div>
-            <div class="description desc-2">
+            <div class="description desc-2" id="perfect_complexion">
                 <div class="desc-img-container">
-                    <img class="list-img list-img-1" src="assets/img/IMAGE3.jpg" alt="">
+                  <picture>
+                    <source srcset="assets/img/IMAGE3.jpg" type="image/jpeg">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
+                  </picture>
                 </div>
                 <div class="desc-details">
                     <h1>THE PERFECT COMPLEXION</h1>
@@ -123,9 +135,12 @@
                         blush</p>
                 </div>
             </div>
-            <div class="description desc-1">
+            <div class="description desc-1" id="red_carpet">
                 <div class="desc-img-container">
-                    <img class="list-img list-img-1" src="assets/img/IMAGE2.jpg" alt="">
+                    <picture>
+                      <source srcset="assets/img/IMAGE2.jpg" type="image/jpeg">
+                      <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
+                    </picture>
                 </div>
                 <div class="desc-details">
                     <h1>THE RED CARPET LOOK</h1>
@@ -151,21 +166,24 @@
 
           <div class="col-12 beauty-experts-container">
             <div class="beauty-expert">
-                <img src="assets/img/Bhavesh.jpg" alt="">
+              <picture>
+                <source srcset="assets/img/Bhavesh.webp" type="image/jpeg">
+                <img src="assets/img/Bhavesh.webp" alt="">
+              </picture>
                 <h1>BHAVESH</h1>
                 <p>Bhavesh’s goal is to make customers feel
                     comfortable with the makeup they wear
                     and to achieve their dream look</p>
             </div>
             <div class="beauty-expert">
-                <img src="assets/img/Wahib.jpg" alt="">
+              <picture>
+                <source srcset="assets/img/Wahib.webp" type="image/jpeg">
+                <img src="assets/img/Wahib.webp" alt="">
+              </picture>
                 <h1>WAHIB</h1>
                 <p>In line with Armani Beauty core values,
                     Wahib’s objective is to enhance every
                     women's natural beauty.</p>
-            </div>
-            <div class="btn-container">
-                <div id="bookNow"></div>
             </div>
           </div>
 
@@ -189,7 +207,7 @@
                         questions or comment in the chat.
                         During the last 15 minutes the face designers will be at your full disposal to answer your additional questions or
                         requests and, if you would like, you can activate your camera and microphone to interact more.</li>
-                    <li><span class="highlight">IS IT POSSIBLE TO ASK QUESTIONS TO THE FACE DESIGNERS?</span> Of course! During the first 30 you can ask questions or
+                    <li><span class="highlight">IS IT POSSIBLE TO ASK QUESTIONS TO THE FACE DESIGNERS?</span> Of course! During the first 30 minutes you can ask questions or
                         comment in the chat, meanwhile the last 15 minutes will be dedicated to answering all of your questions.</li>
                     <li><span class="highlight">SHOULD I PUT MY CAMERA ON?</span> Up to you: the last 15 minutes of the masterclass will be your moment to interact with
                         the face designers and if you wish you can turn on the camera and share the look you created.</li>
@@ -198,21 +216,17 @@
                     <li><span class="highlight">IS THE BEAUTY MASTERCLASS RECORDED?</span> No, the event is not recorded, and it will be only available in live in the
                         Team Meeting.</li>
                     <li><span class="highlight">I HAVE BOOKED A CLASS, BUT I CAN’T PARTICIPATE. WHAT SHOULD I DO?</span> For any modification or cancellation of your
-                        initial booking, please send an email to <a href="mailto:xxx@armanibeauty.com">xxx@armanibeauty.com</a> and we will try to find you an alternative slot. </li>
+                        initial booking, please send an email to <a href="mailto:masterclass.armanibeauty@loreal.com">masterclass.armanibeauty@loreal.com</a> and we will try to find you an alternative slot. </li>
               </ul>
           </div>
       </div>
 
     </div>
 
-    <div id="fixed-buy-block" class="container">
+    <div id="fixed-buy-block" class="container-fluid">
       <div class="row">
-        <h2>Collect when you fly</h2>
         <div class="btn-holder">
-          <!-- <button onclick="window.open('https://www.loreal.com/en/articles/my-way-armani/')">Shop Now</button> -->
-          <!-- <button onclick="window.open('https://www.loreal.com/en/articles/my-way-armani/')">Add To Wallet</button> -->
-          <div id="shopNow"></div>
-          <div id="addToWallet"></div>
+          <div id="bookNow"></div>
         </div>
       </div>
       
@@ -228,16 +242,18 @@
       <h1>&copy; 2020 - ALL RIGHTS RESERVED</h1>
     </footer>
 
-    <!-- jQuery slim minified -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <!-- Popper js minified -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <!-- Bootstrap js minified -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!-- Swiper.js (Carousels) -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Video.js -->
-    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
-    <!-- Custom js -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      
+        var clickableImages = document.querySelectorAll('.click-to-description');
+        for(var i = 0; i < clickableImages.length; i++) {
+          clickableImages[i].addEventListener('click', function() {
+            console.log('asd')
+            var getElementIdForScrolling = this.getAttribute('data-id');
+            document.getElementById(getElementIdForScrolling).scrollIntoView({block: 'center', behavior: 'smooth'})
+          })
+        }
+      });
+    </script>
   </body>
 </html>
