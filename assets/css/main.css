@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Gothic;
+	src: url(../fonts/GOTHIC.TTF);
+}
+
 /* BOOTSTrap part */
 .navbar {
     position: relative;
@@ -1159,4 +1164,35 @@ footer h2, footer h1 {
 .click-to-description {
 	cursor: pointer;
 	padding: 6px;
+}
+
+.col-12.description p {
+	font-family: 'Gothic';
+	font-weight: normal;
+}
+
+.list-description .desc-details div#armaniBtn,
+.list-description .desc-details div#perfectComplexion,
+.list-description .desc-details div#redCarpet {
+	display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#armaniBtn .bx_bn_button.use_bx_ico::after,
+#perfectComplexion .bx_bn_button.use_bx_ico::after,
+#redCarpet .bx_bn_button.use_bx_ico::after{
+	content: '';
+	display: none;
+}
+
+#armaniBtn .bx_bn_button,
+#perfectComplexion .bx_bn_button,
+#redCarpet .bx_bn_button{
+	background-color: #01122c;
+	border: none;
+	font-family: inherit;
+    padding: 7px 20px;
+    font-size: 35px;
+	border-radius: 0;
 }
