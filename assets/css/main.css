@@ -953,7 +953,7 @@ footer h2, footer h1 {
 .description {
     /* font-family: 'didot'; */
 	font-family: 'GFS Didot', serif;
-    font-size: 30px;
+    font-size: 31px;
     line-height: 38px;
     font-weight: 600;
     margin-top: 30px;
@@ -980,7 +980,7 @@ footer h2, footer h1 {
     display: flex;
     width: 33.33%;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .list-img-container .img-container .list-img {
@@ -1173,7 +1173,10 @@ footer h2, footer h1 {
 
 .list-description .desc-details div#armaniBtn,
 .list-description .desc-details div#perfectComplexion,
-.list-description .desc-details div#redCarpet {
+.list-description .desc-details div#redCarpet,
+.list-description .desc-details div#armaniBtnMobile,
+.list-description .desc-details div#perfectComplexionMobile,
+.list-description .desc-details div#redCarpetMobile {
 	display: flex;
     justify-content: center;
     margin-top: 30px;
@@ -1181,14 +1184,20 @@ footer h2, footer h1 {
 
 #armaniBtn .bx_bn_button.use_bx_ico::after,
 #perfectComplexion .bx_bn_button.use_bx_ico::after,
-#redCarpet .bx_bn_button.use_bx_ico::after{
+#redCarpet .bx_bn_button.use_bx_ico::after,
+#armaniBtnMobile .bx_bn_button.use_bx_ico::after,
+#perfectComplexionMobile .bx_bn_button.use_bx_ico::after,
+#redCarpetMobile .bx_bn_button.use_bx_ico::after{
 	content: '';
 	display: none;
 }
 
 #armaniBtn .bx_bn_button,
 #perfectComplexion .bx_bn_button,
-#redCarpet .bx_bn_button{
+#redCarpet .bx_bn_button,
+#armaniBtnMobile .bx_bn_button,
+#perfectComplexionMobile .bx_bn_button,
+#redCarpetMobile .bx_bn_button{
 	background-color: #01122c;
 	border: none;
 	font-family: inherit;
