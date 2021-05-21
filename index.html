@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KC5GHXT');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armani</title>
@@ -21,6 +28,10 @@
     <script src="https://www.google-analytics.com/analytics.js"></script>
 </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC5GHXT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <script>
         window.ga = window.ga || function() { (ga.q=ga.q||[]).push(arguments) };ga.l =+ new Date;
   
@@ -55,7 +66,7 @@
       </script>
 
     <nav class="navbar navbar-custom justify-content-center fixed-top">
-      <a class="navbar-brand" href="https://www.loreal.com/" target="_blank">
+      <a id="brand-logo-link" class="navbar-brand" href="https://www.loreal.com/" target="_blank">
         <img src="assets/img/logo.svg" alt="">
       </a>
     </nav>
@@ -351,9 +362,9 @@
 
     <footer class="row flex-column justify-content-center align-items-center">
       <div class="d-flex justify-content-center align-items-center" id="social-group">
-        <a href="https://www.instagram.com/loreal/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/lorealhungary/?brand_redir=499580396772295" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://www.youtube.com/channel/UCgmvz6qxtga4W6n1mfmM0Zw" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        <a id="instagram-link" href="https://www.instagram.com/loreal/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a id="facebook-link" href="https://www.facebook.com/lorealhungary/?brand_redir=499580396772295" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a id="youtube-link" href="https://www.youtube.com/channel/UCgmvz6qxtga4W6n1mfmM0Zw" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
       </div>
       <h1>Terms&amp;Conditions</h1>
       <h1>&copy; 2020 - ALL RIGHTS RESERVED</h1>
@@ -362,6 +373,20 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
       
+        // dataLayer events
+        var brandLogo = document.getElementById('brand-logo-link');
+        var instagramLink = document.getElementById('instagram-link');
+        var facebookLink = document.getElementById('facebook-link');
+        var youtubeLink = document.getElementById('youtube-link');
+
+        var bookNow = document.getElementById('bookNow');
+        var armaniBtn = document.getElementById('armaniBtn');
+        var redCarpet = document.getElementById('redCarpet');
+        var perfectComplexion = document.getElementById('perfectComplexion');
+        var armaniBtnMobile = document.getElementById('armaniBtnMobile');
+        var redCarpetMobile = document.getElementById('redCarpetMobile');
+        var perfectComplexionMobile = document.getElementById('perfectComplexionMobile');
+
         var clickableImages = document.querySelectorAll('.click-to-description');
         
         for(var i = 0; i < clickableImages.length; i++) {
@@ -377,7 +402,74 @@
               }
             }
           })
-        }
+        };
+
+        
+        brandLogo.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          dataLayer.push({
+            'event': 'buttonClick',
+            'eventCategory': 'content',
+            'eventAction': 'brand logo button click',
+            'eventLabel': 'Giorgio Armani', // this is an example
+            'pageLocation': 'nav' // this is an example
+          });
+          
+          window.open(this.getAttribute('href'), '_blank');
+        });
+
+        [bookNow, armaniBtn, redCarpet, perfectComplexion, armaniBtnMobile, redCarpetMobile, perfectComplexionMobile].forEach(function(element) {
+          element.addEventListener('click', function() {
+            dataLayer.push({
+              'event': 'buttonClick',
+              'eventCategory':'content',
+              'eventAction': 'book now button click',
+              'eventLabel': 'Armani Beauty Virtual Masterclasses', 
+              'pageLocation': 'fixed on bottom of the page' 
+            });
+          });
+        })
+
+        instagramLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          dataLayer.push({
+            'event': 'buttonClick',
+            'eventCategory':'content',
+            'eventAction': 'social network button click',
+            'eventLabel': 'Instagram', // this is an example
+            'pageLocation': 'footer' // this is an example
+          });
+
+          window.open(this.getAttribute('href'), '_blank');
+        });
+
+        facebookLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          dataLayer.push({
+            'event': 'buttonClick',
+            'eventCategory':'content',
+            'eventAction': 'social network button click',
+            'eventLabel': 'Facebook', // this is an example
+            'pageLocation': 'footer' // this is an example
+          });
+
+          window.open(this.getAttribute('href'), '_blank');
+        });
+
+        youtubeLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          dataLayer.push({
+            'event': 'buttonClick',
+            'eventCategory':'content',
+            'eventAction': 'social network button click',
+            'eventLabel': 'Youtube', // this is an example
+            'pageLocation': 'footer' // this is an example
+          });
+
+          window.open(this.getAttribute('href'), '_blank');
+        });
+
       });
     </script>
   </body>

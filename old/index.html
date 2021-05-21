@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armani</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Responsivity CSS -->
+    <link rel="stylesheet" href="assets/css/responsivity.css">
+    
+    <!-- booxi script -->
+    <script src="https://www.booxi.eu/api/booknow.js" async=""></script>
+    <script src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+  <body>
+    <script>
+        window.ga = window.ga || function() { (ga.q=ga.q||[]).push(arguments) };ga.l =+ new Date;
+  
+        var bnHandler = null;
+        window.bxApiInit = function () {
+          bnHandler = booxiController.configure({
+            apiKey: "B2b2n0918Up4yig4c09035P064ZjYU2y"
+          });
+          bnHandler.createBookingButton('bookNow', {
+            buttonText: "Book Now"
+          });
+          bnHandler.createBookingButton('armaniBtn', {
+            buttonText: "Book Now"
+          });
+          bnHandler.createBookingButton('redCarpet', {
+            buttonText: "Book Now"
+          });
+          bnHandler.createBookingButton('perfectComplexion', {
+            buttonText: "Book Now"
+          });
+
+          bnHandler.createBookingButton('armaniBtnMobile', {
+            buttonText: "Book Now"
+          });
+          bnHandler.createBookingButton('redCarpetMobile', {
+            buttonText: "Book Now"
+          });
+          bnHandler.createBookingButton('perfectComplexionMobile', {
+            buttonText: "Book Now"
+          });
+        };
+      </script>
+
+    <nav class="navbar navbar-custom justify-content-center fixed-top">
+      <a class="navbar-brand" href="https://www.loreal.com/" target="_blank">
+        <img src="assets/img/logo.svg" alt="">
+      </a>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+            <picture>
+              <source srcset="assets/img/BANNIERE1024_1.jpg" type="image/jpeg">
+              <img class="main-img" src="assets/img/BANNIERE1024_1.webp" alt="">
+            </picture>
+          </div>
+
+          <div class="col-12 description">
+              <p>GIORGIO ARMANI invites you to experience one exclusive Virtual Beauty Masterclass</br>
+                with the internationally known Armani Face Designers.</br>
+                Discover beauty secrets & learn how to get the Armani glow.</p>
+          </div>
+
+          <div class="col-12 header-div">
+              <h1>DISCOVER OUR MASTERCLASSES</h1>
+          </div>
+
+          <div class="col-12 list-img-container">
+              <div class="img-container click-to-description" data-id="armani_gaze">
+                <picture>
+                  <source srcset="assets/img/IMAGE1.webp" type="image/jpeg">
+                  <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
+                </picture>
+                <p>THE ARMANI <br> GAZE</p>
+              </div>
+
+              <div class="img-container click-to-description" data-id="perfect_complexion">
+                <picture>
+                  <source srcset="assets/img/IMAGE3.jpg" type="image/jpeg">
+                  <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
+                </picture>
+                <p>THE PERFECT COMPLEXION</p>
+              </div>
+
+              <div class="img-container click-to-description" data-id="red_carpet">
+                <picture>
+                  <source srcset="assets/img/IMAGE2.jpg" type="image/jpeg">
+                  <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
+                </picture>
+                <p>THE RED CARPET LOOK</p>
+              </div>
+          </div>
+
+          <div class="col-12 list-description list-description-mobile">
+            <div class="description desc-1 armani_gaze" id="armani_gaze">
+                <div class="desc-details">
+                    <h1>THE ARMANI GAZE</h1>
+
+                    <div class="desc-img-container">
+                      <picture>
+                        <source srcset="assets/img/IMAGE1.jpg" type="image/jpeg">
+                        <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
+                      </picture>
+                    </div>
+
+                    <p>Learn how to recreate the mysterious
+                        Armani Gaze in just a few easy steps:
+                        regardless of the occasion, add an
+                        audacious touch for an eye-opening
+                        effect</p>
+
+                    <p><span class="highlight">Duration: </span>30 minute class + 15 minute Q&A</p>
+                    <p><span class="highlight">Participants: </span>15 guest limit</p>
+                    <p><span class="highlight">Language: </span>English</p>
+                    <p><span class="highlight">Level: </span>Any</p>
+                    <p><span class="highlight">Recommended material: </span>Eye shadows
+                        (powder or liquid), eye brushes, eye
+                        pencil/liner and mascara</p>
+
+                    <div id="armaniBtnMobile">Book Now</div>
+                </div>
+            </div>
+            <div class="description desc-2 perfect_complexion" id="perfect_complexion">
+                <div class="desc-details">
+                    <h1>THE PERFECT COMPLEXION</h1>
+
+                    <div class="desc-img-container">
+                      <picture>
+                        <source srcset="assets/img/IMAGE3.jpg" type="image/jpeg">
+                        <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
+                      </picture>
+                    </div>
+
+                    <p>Learn how to master the perfect glow for a
+                        radiant complexion, to enhance your natural
+                        beauty</p>
+
+                    <p><span class="highlight">Duration: </span>30 minute class + 15 minute Q&A</p>
+                    <p><span class="highlight">Participants: </span>15 guest limit</p>
+                    <p><span class="highlight">Language: </span>English</p>
+                    <p><span class="highlight">Level: </span>Any</p>
+                    <p><span class="highlight">Recommended material: </span>Face brushes, primer,
+                        liquid foundation/tinted moisturizer/ cushion,
+                        concealer, face powder, bronzer, highlighter and
+                        blush</p>
+
+                    <div id="perfectComplexionMobile">Book Now</div>
+                </div>
+            </div>
+            <div class="description desc-1 red_carpet" id="red_carpet">
+                <div class="desc-details">
+                    <h1>THE RED CARPET LOOK</h1>
+
+                    <div class="desc-img-container">
+                        <picture>
+                          <source srcset="assets/img/IMAGE2.jpg" type="image/jpeg">
+                          <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
+                        </picture>
+                    </div>
+
+                    <p>Learn the backstage tips to replicate a
+                        sophisticated look to shine at any party,
+                        gala and perhaps on the red carpet?</p>
+
+                    <p><span class="highlight">Duration: </span>30 minute class + 15 minute Q&A</p>
+                    <p><span class="highlight">Participants: </span>15 guest limit</p>
+                    <p><span class="highlight">Language: </span>English</p>
+                    <p><span class="highlight">Level: </span>Any</p>
+                    <p><span class="highlight">Recommended material: </span>brushes for
+                        complexion and eyes, foundation,
+                        eyeshadows, mascara, lip pencil and
+                        lipstick</p>
+
+                    <div id="redCarpetMobile">Book Now</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-12 list-description list-description-desktop">
+            <div class="description desc-1 armani_gaze" id="armani_gaze">
+
+                <div class="desc-img-container">
+                  <picture>
+                    <source srcset="assets/img/IMAGE1.jpg" type="image/jpeg">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE1.webp" alt="">
+                  </picture>
+                </div>
+                
+                <div class="desc-details">
+                    <h1>THE ARMANI GAZE</h1>
+
+                    <p>Learn how to recreate the mysterious
+                        Armani Gaze in just a few easy steps:
+                        regardless of the occasion, add an
+                        audacious touch for an eye-opening
+                        effect</p>
+
+                    <p><span class="highlight">Duration: </span>30 minute class + 15 minute Q&A</p>
+                    <p><span class="highlight">Participants: </span>15 guest limit</p>
+                    <p><span class="highlight">Language: </span>English</p>
+                    <p><span class="highlight">Level: </span>Any</p>
+                    <p><span class="highlight">Recommended material: </span>Eye shadows
+                        (powder or liquid), eye brushes, eye
+                        pencil/liner and mascara</p>
+
+                    <div id="armaniBtn">Book Now</div>
+                </div>
+            </div>
+            <div class="description desc-2 perfect_complexion" id="perfect_complexion">
+
+                <div class="desc-img-container">
+                  <picture>
+                    <source srcset="assets/img/IMAGE3.jpg" type="image/jpeg">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE3.webp" alt="">
+                  </picture>
+                </div>
+
+                <div class="desc-details">
+                    <h1>THE PERFECT COMPLEXION</h1>
+
+                    <p>Learn how to master the perfect glow for a
+                        radiant complexion, to enhance your natural
+                        beauty</p>
+
+                    <p><span class="highlight">Duration: </span>30 minute class + 15 minute Q&A</p>
+                    <p><span class="highlight">Participants: </span>15 guest limit</p>
+                    <p><span class="highlight">Language: </span>English</p>
+                    <p><span class="highlight">Level: </span>Any</p>
+                    <p><span class="highlight">Recommended material: </span>Face brushes, primer,
+                        liquid foundation/tinted moisturizer/ cushion,
+                        concealer, face powder, bronzer, highlighter and
+                        blush</p>
+
+                    <div id="perfectComplexion">Book Now</div>
+                </div>
+            </div>
+            <div class="description desc-1 red_carpet" id="red_carpet">
+
+                <div class="desc-img-container">
+                  <picture>
+                    <source srcset="assets/img/IMAGE2.jpg" type="image/jpeg">
+                    <img class="list-img list-img-1" src="assets/img/IMAGE2.webp" alt="">
+                  </picture>
+                </div>
+
+                <div class="desc-details">
+                    <h1>THE RED CARPET LOOK</h1>
+                    <p>Learn the backstage tips to replicate a
+                        sophisticated look to shine at any party,
+                        gala and perhaps on the red carpet?</p>
+
+                    <p><span class="highlight">Duration: </span>30 minute class + 15 minute Q&A</p>
+                    <p><span class="highlight">Participants: </span>15 guest limit</p>
+                    <p><span class="highlight">Language: </span>English</p>
+                    <p><span class="highlight">Level: </span>Any</p>
+                    <p><span class="highlight">Recommended material: </span>brushes for
+                        complexion and eyes, foundation,
+                        eyeshadows, mascara, lip pencil and
+                        lipstick</p>
+
+                    <div id="redCarpet">Book Now</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-12 header-div">
+            <h1>MEET OUR FACE DESIGNERS</h1>
+          </div>
+
+          <div class="col-12 beauty-experts-container">
+            <div class="beauty-expert">
+              <picture>
+                <source srcset="assets/img/Bhavesh.webp" type="image/jpeg">
+                <img src="assets/img/Bhavesh.webp" alt="">
+              </picture>
+                <h1>BHAVESH</h1>
+                <p>Bhavesh’s goal is to make customers feel
+                    comfortable with the makeup they wear
+                    and to achieve their dream look</p>
+            </div>
+            <div class="beauty-expert">
+              <picture>
+                <source srcset="assets/img/Wahib.webp" type="image/jpeg">
+                <img src="assets/img/Wahib.webp" alt="">
+              </picture>
+                <h1>WAHIB</h1>
+                <p>In line with Armani Beauty core values,
+                    Wahib’s objective is to enhance every
+                    women's natural beauty</p>
+            </div>
+          </div>
+
+          <div class="col-12 header-div">
+            <h1>FAQ</h1>
+          </div>
+
+          <div class="col-12 faq">
+              <ul>
+                    <li><span class="highlight">HOW CAN I BOOK MY MASTERCLASS? </span>Click on BOOK NOW, follow the steps and select your masterclass. You will
+                    receive a confirmation email, with your booking details and the TEAM MEETING link to access the live masterclass.</li>
+                    <li><span class="highlight">CAN I BOOK MORE THAN ONE MASTERCLASS? </span>No, each printed invitation is valid to book only one masterclass. The
+                        invitation is strictly personal and can’t be transferred.</li>
+                    <li><span class="highlight"> HOW DOES A TEAM MEETING WORK? </span>Click on the link that you will receive by email to join the masterclass to be
+                        taken to a page where you can choose to either join on the web or download the desktop app. If you already have
+                        the Teams app, the meeting will open there automatically.
+                        If you don’t have a Teams account, you have the option to enter your name to join the meeting as a guest. If you
+                        do have a Teams account, select Sign in to join.</li>
+                    <li><span class="highlight">WHAT IS THE MASTERCLASS FORMAT? </span>During the first 30 minutes the Face Designers will show you how to recreate a
+                        look on a model, explaining each step and sharing secret tips. In the meantime, you will have the chance to ask
+                        questions or comment in the chat.
+                        During the last 15 minutes the face designers will be at your full disposal to answer your additional questions or
+                        requests and, if you would like, you can activate your camera and microphone to interact more.</li>
+                    <li><span class="highlight">IS IT POSSIBLE TO ASK QUESTIONS TO THE FACE DESIGNERS?</span> Of course! During the first 30 minutes you can ask questions or
+                        comment in the chat, meanwhile the last 15 minutes will be dedicated to answering all of your questions.</li>
+                    <li><span class="highlight">SHOULD I PUT MY CAMERA ON?</span> Up to you: the last 15 minutes of the masterclass will be your moment to interact with
+                        the Face Designers and if you wish you can turn on the camera and share the look you created.</li>
+                    <li><span class="highlight">I DON’T HAVE ALL THE REQUIRED MATERIALS. CAN I STILL PARTICIPATE IN THE CLASS?</span> Yes, you can try to replicate the
+                        make-up look with other materials, or you can just listen to the masterclass and recreate the look another time.</li>
+                    <li><span class="highlight">IS THE BEAUTY MASTERCLASS RECORDED?</span> No, the event is not recorded, and it will be only available in live in the
+                        Team Meeting.</li>
+                    <li><span class="highlight">I HAVE BOOKED A CLASS, BUT I CAN’T PARTICIPATE. WHAT SHOULD I DO?</span> For any modification or cancellation of your
+                        initial booking, please send an email to <a href="mailto:masterclass.armanibeauty@loreal.com">masterclass.armanibeauty@loreal.com</a> and we will try to find you an alternative slot. </li>
+              </ul>
+          </div>
+      </div>
+
+    </div>
+
+    <div id="fixed-buy-block" class="container-fluid">
+      <div class="row">
+        <div class="btn-holder">
+          <div id="bookNow"></div>
+        </div>
+      </div>
+      
+    </div>
+
+    <footer class="row flex-column justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center" id="social-group">
+        <a href="https://www.instagram.com/loreal/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/lorealhungary/?brand_redir=499580396772295" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCgmvz6qxtga4W6n1mfmM0Zw" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+      </div>
+      <h1>Terms&amp;Conditions</h1>
+      <h1>&copy; 2020 - ALL RIGHTS RESERVED</h1>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      
+        var clickableImages = document.querySelectorAll('.click-to-description');
+        
+        for(var i = 0; i < clickableImages.length; i++) {
+          clickableImages[i].addEventListener('click', function() {
+            
+            var getElementIdForScrolling = this.getAttribute('data-id');
+            var descriptionToScroll = document.querySelectorAll('.' + getElementIdForScrolling);
+            for(var j = 0; j < descriptionToScroll.length; j++) {
+              
+              var descriptionToScrollParentStyle = window.getComputedStyle(descriptionToScroll[j].parentElement);
+              if(descriptionToScrollParentStyle.display != 'none') {
+                descriptionToScroll[j].scrollIntoView({block: 'center', behavior: 'smooth'})
+              }
+            }
+          })
+        }
+      });
+    </script>
+  </body>
+</html>
